@@ -1,0 +1,28 @@
+[host_machine]
+system = 'android'
+cpu_family = 'arm'
+cpu = 'arm'
+endian = 'little'
+
+[constants]
+android_ndk = '/home/djshaji/ndk/toolchains/llvm/prebuilt/linux-x86_64/bin/'
+toolchain = '/home/djshaji/ndk/toolchains/llvm/prebuilt/linux-x86_64/bin/'
+outdir = '/home/djshaji/projects/zix-android'
+
+[binaries]
+c = '/home/djshaji/ndk/toolchains/llvm/prebuilt/linux-x86_64/bin/armv7a-linux-androideabi29-clang'
+cpp = 'armv7a-linux-androideabi29-clang++'
+pkgconfig = '/usr/bin/pkg-config'
+
+[built-in options]
+c_std = 'c11'
+prefix = '/home/djshaji/projects/zix-android'
+c_args = ['-fPIC','-I/home/djshaji/projects/zix-android']
+cpp_args = ['-fPIC','-I/home/djshaji/projects/zix-android']
+c_link_args = ['-fPIE','-L/home/djshaji/projects/zix-android']
+
+pkg_config_path = '/home/djshaji/projects/zix-android'
+
+default_library = 'static'
+
+# vim:ft=python
